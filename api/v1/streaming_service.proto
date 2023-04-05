@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package="github.com/adityavit/grpStreamingService/api_v1";
+
+service StreamingService {
+  rpc StreamData (DataRequest) returns (stream DataResponse) {}
+}
+
+message DataRequest {
+  string message = 1;
+}
+
+message DataResponse {
+  string message = 1;
+}
